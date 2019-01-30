@@ -1,0 +1,70 @@
+@import '../../styles/index';
+
+
+.Adjustment-block {
+  @extend %formBox;
+
+  &-subtitle {
+    text-align: center;
+  }
+  &-header {@extend %formBox-header}
+  &-form {
+    @extend %formBox-form;
+    margin-bottom: 50px;
+    &-subtitle {@extend %formBox-form-subtitle}
+    @import 'input-range';
+
+    label {
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .input-range {
+      float: right;
+      width: 55%;
+
+      &__label {
+        &-container {
+          &:before {
+            content: '\00A3';
+          }
+        }
+        &--min {
+          display: none;
+        }
+        &--max {
+          display: none;
+        }
+      }
+
+      &__track {
+        &--active {
+          background: $primary;
+        }
+      }
+
+      &__slider {
+        background: $primary;
+      }
+    }
+  }
+
+  &-calculation {
+    margin: 2em auto;
+    text-align: center;
+    font-weight: bold;
+    color: $primary;
+
+    &-amount {
+      color: $accent;
+    }
+  }
+
+  &-button {
+    margin: 15px auto;
+  }
+
+  &-was-helpful {
+    justify-content: flex-end;
+  }
+}

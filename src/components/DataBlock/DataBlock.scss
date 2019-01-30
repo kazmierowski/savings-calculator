@@ -1,0 +1,11 @@
+@import './../../styles/index';
+
+.DataBlock {
+  @extend %formBox;
+  &-header {@extend %formBox-header}
+   &-form {
+     @extend %formBox-form;
+     &-subtitle {@extend %formBox-form-subtitle}
+     &-row {@extend %formBox-form-row}
+   }
+}

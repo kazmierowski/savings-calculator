@@ -1,0 +1,35 @@
+@import '../../styles/index';
+
+.Was-helpful {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 10px;
+  min-height: 40px;
+  text-decoration: underline;
+  font-weight: bold;
+
+  &-thumbs {
+    margin-left: 10px;
+    &-up {
+      margin-right: 5px;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background: url("./../../media/thumbs_up.svg") no-repeat top left;
+      cursor: pointer;
+    }
+    &-down {
+      cursor: pointer;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      background: url("./../../media/thumbs_down.svg") no-repeat top left;
+    }
+    &-thanks {
+      color: $accent;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  }
+}
